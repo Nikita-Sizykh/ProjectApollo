@@ -1,0 +1,45 @@
+.heading {
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 30px;
+	font-size: 28px;
+	font-weight: 700;
+	color: #333;
+
+	@media (min-width: 1200px){
+		margin-bottom: 40px;
+		font-size: 38px;
+	}
+
+	&--smaller-margin {
+		margin-bottom: 20px;
+	}
+
+	&--number::before {
+		position: absolute;
+		left: -13px;
+		top: -40px;
+		height: 26px;
+		width: 26px;
+		padding-top: 5px;
+		padding-left: 8px;
+		display: block;
+		border-radius: 13px;
+		background-color: @orange;
+		color: #fff;
+		font-size: 16px;
+		font-weight: 700;
+		content: "";
+
+		@media (min-width: 1200px){
+			left: -32px;
+			top: -30px;
+		}
+	}
+	&--number-1::before {
+		content: "1";
+	}
+	&--number-2::before {
+		content: "2";
+	}
+}
